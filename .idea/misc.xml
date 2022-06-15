@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/create_todo_dialog.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_recyclerview.xml" value="0.31950207468879666" />
         <entry key="app/src/main/res/layout/item_recyclerview_layout.xml" value="0.25" />
       </map>
