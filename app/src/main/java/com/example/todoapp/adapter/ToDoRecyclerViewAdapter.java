@@ -4,6 +4,8 @@ import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,8 +15,7 @@ import com.example.todoapp.model.ToDoModel;
 
 import java.util.List;
 
-public class ToDoRecyclerViewAdapter extends
-        RecyclerView.Adapter<ToDoRecyclerViewAdapter.ToDoViewHolder> {
+public class ToDoRecyclerViewAdapter extends RecyclerView.Adapter<ToDoRecyclerViewAdapter.ToDoViewHolder> {
     private final OnClickItem mListener;
     private List<ToDoModel> mToDoList;
 
@@ -62,11 +63,10 @@ public class ToDoRecyclerViewAdapter extends
         }
 
         protected void bind(ToDoModel toDo) {
-            this.mBinding.todoTitle.setText(toDo.getTitle());
-            this.mBinding.todoDescription.setText(toDo.getDescription());
-            if (toDo.isCompleted()) {
-                this.mBinding.todoCompleted.isChecked();
-            }
+            mBinding.todoTitle.setText(toDo.getTitle());
+            mBinding.todoDescription.setText(toDo.getDescription());
+            mBinding.todoCompleted.setChecked(toDo.isCompleted());
+            mBinding.getRoot().setOnClickListener(this);
         }
 
         @Override

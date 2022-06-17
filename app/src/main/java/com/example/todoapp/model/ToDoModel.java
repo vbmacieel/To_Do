@@ -1,10 +1,28 @@
 package com.example.todoapp.model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "todo")
 public class ToDoModel {
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String title;
     private String description;
     private boolean completed = false;
+
+    public ToDoModel() {
+    }
+
+    public ToDoModel(String title, String description, boolean completed) {
+        this.title = title;
+        this.description = description;
+        this.completed = completed;
+    }
+
+    public int getId() {
+        return id;
+    }
 
     public void setId(int id) {
         this.id = id;
