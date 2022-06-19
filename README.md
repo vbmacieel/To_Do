@@ -10,8 +10,8 @@ The technologies used in the project are:
 - Fragments
 
 ### Features ✔️
-- [ ] Create the layouts;
-- [ ] Implements the dependencies;
-- [ ] Implements the RecyclerView's adapter;
-- [ ] Start with Room;
-- [ ] Integrate MVVM;
+- [x] Create the layouts;
+- [x] Implements the dependencies;
+- [x] Implements the RecyclerView's adapter;
+- [x] Start with Room;
+- [x] Integrate MVVM;
